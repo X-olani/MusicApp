@@ -1,14 +1,54 @@
 .App {
 }
 
-.albumcover {
+.AlbumCover {
   width: 100%;
 }
 nav {
   width: 100%;
-  background-color: #7b690e;
+  background-color: #14212f;
   height: 50px;
   color: white;
+}
+#BIO:hover {
+  color: red;
+  cursor: pointer;
+}
+.CloseIcon {
+  color: #60faf1;
+  float: right;
+  margin-top: auto;
+}
+.CloseCart {
+  color: #60faf1;
+  margin-bottom: -9px;
+}
+.Search {
+  float: right;
+}
+.Slider {
+  text-align: center;
+  background-color: #14212f;
+  height: 263px;
+  position: absolute;
+  width: 0px;
+}
+#A {
+  margin: 10px;
+  color: white;
+  padding-top: 8px;
+  width: 93%;
+  border: 2px solid #3eb8a8;
+  height: 22px;
+}
+
+.Header {
+  display: inline;
+}
+.MenuIcon {
+  color: #60faf1;
+  width: 3%;
+  float: left;
 }
 .display_selected_genre {
   overflow: auto;
@@ -17,43 +57,48 @@ nav {
   height: 203px;
   border-top: 2px solid black;
 }
-.displayed_albums {
+.DisplayedAlbums {
   width: 100%;
-  height: 417px;
+}
+.Albums {
+  text-align: center;
+  width: 50%;
+
+  border: 2px solid gray;
+
+  margin: 10px;
+}
+.DisplayGenre1 {
+  margin-top: 44px;
+}
+.MainContent {
+}
+.DisplayAlbums {
+  font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+  text-align: center;
+  width: 51%;
+  height: 666px;
+  margin: 10px;
+  overflow: auto;
+  border: 2px solid black;
+  float: left;
+  margin-left: 15%;
+}
+#BIOstyle {
+  height: 91px;
   overflow: auto;
 }
-.albums {
+.DisplayGenre {
   text-align: center;
-  width: 40%;
-  height: 365px;
-  border: 2px solid gray;
-  float: left;
-  margin: 10px;
-}
-.display_genre1 {
-  margin-top: 20px;
-}
-
-.display_albums {
-  width: 54%;
-  height: 653px;
-  margin: 10px;
-
-  border: 2px solid black;
-  float: left;
-}
-.display_genre {
-  text-align: center;
-  float: left;
-  width: 20%;
-  height: 200px;
-  margin: 10px;
-  border: 2px solid black;
+  font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+  width: 99%;
+  height: 219px;
 }
 .selected_G {
+  font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
   float: left;
   width: 20%;
-  height: 436px;
+  height: 565px;
   margin: 10px;
   padding: 4px;
   border: 2px solid black;
@@ -61,4 +106,70 @@ nav {
 
 input {
   border-radius: 25px;
+}
+
+.CART {
+  font-family: "Verdana", "Geneva", "Tahoma", "sans-serif";
+  color: white;
+  width: 20%;
+  height: 351px;
+  border: 2px solid black;
+  float: left;
+  position: absolute;
+  margin-left: 79.19%;
+  padding: 4px;
+  background-color: #14212f;
+}
+.CartIcon {
+  width: 7%;
+}
+#ClearButton {
+  width: 16%;
+  padding: 9px;
+  height: 14px;
+  border-radius: 13%;
+  border: 2px solid #3eb8a8;
+}
+.CartLength {
+  margin: 0px;
+  margin-top: 5px;
+  color: #60faf1;
+}
+.CountCart {
+  display: inline;
+  background-color: red;
+  border-radius: 1%;
+}
+.CartIcon1 {
+  width: 8%;
+  float: left;
+  color: #60faf1;
+}
+.ItemsOfCart {
+  width: 100%;
+  overflow: auto;
+  height: 202px;
+}
+.CartPTag {
+  padding: 10px;
+  border: 2px solid #3eb8a8;
+}
+
+.CartP {
+}
+.CartButton {
+  width: 49%;
+}
+.DivCart {
+  margin-left: 24px;
+  text-align: -webkit-center;
+  width: 45%;
+  height: 300px;
+  float: left;
+  border: 2px solid black;
+}
+#ImgFromSelected {
+  width: 100%;
+  height: 251px;
+  overflow: auto;
 }

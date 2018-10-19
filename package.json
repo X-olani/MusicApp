@@ -4,13 +4,18 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "jquery": "^3.3.1",
     "react": "^16.5.2",
     "react-axios": "^2.0.1",
     "react-dom": "^16.5.2",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.2.0",
+    "react-icons-kit": "^1.2.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "thepiratebay": "^1.4.7",
     "thunk": "0.0.1"
   },
   "scripts": {

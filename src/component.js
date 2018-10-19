@@ -1,41 +1,53 @@
 import { connect } from "react-redux";
 import {
   Genre,
-  selected_album_fromGenre,
-  Search_bar,
+  selectedAlbumFromGenre,
+  searchBar,
   doSearch,
-  selected_album_from_albums
+  selected_album_from_albums,
+  addToCart,
+  doClearOfCart,
+  doShowTheBIO
 } from "./store";
-
 import { getAlbumsWithCovers } from "./selectors";
 
 import { App } from "./App";
 
 const mapStateToProps = state => ({
+  BIO: state.BIO,
   genre: state.genre,
-  music_genre: state.music_genre,
+  musicGenre: state.musicGenre,
   selectedAlbums: state.selectedAlbums,
   selected_genre: state.selected_genre,
   search: state.search,
   albums: getAlbumsWithCovers(state),
   newCovers: state.newCovers,
   newSelectedAlbums: state.newSelectedAlbums,
-  covers: state.covers.art
+  covers: state.covers.art,
+  cart: state.cart,
+  cartLength: state.cartLength
 });
 
 const mapDispatchToProps = dispatch => {
-  const Getalbum_from_Ablum = args =>
-    dispatch(selected_album_from_albums(args));
-  const Getalbum_fromGenre = args => dispatch(selected_album_fromGenre(args));
-  const Getgenre = args => dispatch(Genre(args));
-  const Getsearch = args => dispatch(Search_bar(args));
-  const Getsearch_button = () => dispatch(doSearch());
+  const doCartClear = () => dispatch(doClearOfCart());
+  const getCartButton = args => dispatch(addToCart(args));
+  const getAlbumFromAlbums = index =>
+    dispatch(selected_album_from_albums(index));
+  const getAlbumFromGenre = args => dispatch(selectedAlbumFromGenre(args));
+  const getGenre = args => dispatch(Genre(args));
+  const getSearch = args => dispatch(searchBar(args));
+  const getSearchButtonResult = () => dispatch(doSearch());
+  const doTheBIO = () => dispatch(doShowTheBIO());
+
   return {
-    Getalbum_from_Ablum: Getalbum_from_Ablum,
-    Getgenre: Getgenre,
-    Getalbum_fromGenre: Getalbum_fromGenre,
-    Getsearch: Getsearch,
-    Getsearch_button: Getsearch_button
+    doTheBIO: doTheBIO,
+    doCartClear: doCartClear,
+    getCartButton: getCartButton,
+    getAlbumFromAlbums: getAlbumFromAlbums,
+    getGenre: getGenre,
+    getAlbumFromGenre: getAlbumFromGenre,
+    getSearch: getSearch,
+    getSearchButtonResult: getSearchButtonResult
   };
 };
 export const Component = connect(
